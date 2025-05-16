@@ -1,0 +1,6 @@
+.vscode
+*.md
+viz.ipynb
+.env
+node_modules
+test.py
