@@ -9,6 +9,10 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Quattrocento:wght@400;700&display=swap"
 			rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+		<!-- Import vega-embed -->
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 	</head>
 	<body>
 		<!-- Title Screen -->
@@ -94,9 +98,19 @@
 					collapse caused by his lung cancer.
 				</p>
 			</div>
+
+			<div id="calories-viz" class="viz"></div>
+
 		</div>
 	</body>
 </html>
+
+<script type="text/javascript">
+	var spec = "https://raw.githubusercontent.com/CharlieKerfoot/the-leftovers-of-big-tobacco/refs/heads/main/data/calories.json";
+	vegaEmbed('#calories-viz', spec).then(function(result) {
+	  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+  </script>
 
 <style>
 	body {
@@ -183,6 +197,7 @@
 		align-self: center;
 		font-size: 20px;
         display: flex;
+		background-color: whitesmoke;
 	}
 
 	p {
@@ -215,5 +230,10 @@
         );
 		display: flex;
         flex-direction: column;
+	}
+
+	.viz {
+		margin-top: 5em;
+		align-self: center;
 	}
 </style>
