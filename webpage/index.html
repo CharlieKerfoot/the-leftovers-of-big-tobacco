@@ -13,6 +13,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 		<!-- Import vega-embed -->
 		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+		<script src="https://unpkg.com/scrollama"></script>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
 	</head>
 	<body>
 		<!-- Title Screen -->
@@ -35,99 +37,414 @@
 
 		<div class="desc-container">
 			<div style="display: flex; justify-content: space-between">
-				<div>A Seven Course Feast</div>
+				<div>A Five Course Feast</div>
 				<div style="color: #9a2020">FREE</div>
 			</div>
 			<div>Open 24 Hours / No Substitutions / No Smoking</div>
 			<div>Presented By Charlie Kerfoot</div>
 		</div>
 
-		<!-- Background Screen -->
-
-		<div class="background">
-			<div class="chapter-title">APPETIZERS</div>
-
-			<div class="text-div">
-				<p>
-					It is December 15th, 1966. The date for Super Bowl I has just been
-					announced and UCLA Freshman
-					<a
-						href="https://uclabruins.com/honors/hall-of-fame/lew-kareem-abduljabbar-alcindor/257"
-						>Lew Alcindor</a
-					>
-					made his collegiate debut last week, breaking the school record for
-					most points scored in a game.
-				</p>
+		<!-- Scrollama Section -->
+		<div id="scroll">
+			<div class="graphic">
+				<div class="background">
+					<div class="chapter-title">APPETIZERS</div>
+					<div class="image-container">
+						<img
+							class="scroll-image active"
+							src="https://static.life.com/wp-content/uploads/migrated/2014/12/first-super-bowl-15-1024x693.jpg"
+							alt="Super Bowl I" />
+						<img
+							class="scroll-image"
+							src="https://upload.wikimedia.org/wikipedia/commons/5/50/Walt_Disney_1946_%28cropped2%29.JPG"
+							alt="Walt Disney" />
+						<img
+							class="scroll-image"
+							src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Walt_Disney_Grave.JPG"
+							alt="Walt Disney Grave" />
+						<img
+							class="scroll-image"
+							src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/11/18/18/disney-gtha.jpg?width=1200"
+							alt="Walt Disney Smoking" />
+						<img
+							class="scroll-image"
+							src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/11/18/18/disney-gtha.jpg?width=1200"
+							alt="Walt Disney Smoking" />
+						<img
+							class="scroll-image"
+							src="https://static1.squarespace.com/static/5df00758c693820d091f490c/t/5e860ccf9513904146d1d47b/1585843409401/?format=1500w"
+							alt="Marlboro Ad" />
+					</div>
+				</div>
 			</div>
 
-			<div class="text-div">
-				<p>
-					10 days prior, acclaimed animator and film producer, Walt Disney, had
-					just celebrated his birthday. Now he lay dead, 30 minutes from his
-					home in Los Angeles, in a bed at Saint Joseph Hospital. The following
-					day, his funeral would be held and on December 17th, he would be
-					cremated with his ashes interred at Forest Lawn Memorial Park.
-				</p>
+			<div class="scroll_text">
+				<div class="step" data-step="1">
+					<p>
+						It is December 15th, 1966. The date for Super Bowl I has just been
+						announced and UCLA Freshman
+						<a
+							href="https://uclabruins.com/honors/hall-of-fame/lew-kareem-abduljabbar-alcindor/257"
+							>Lew Alcindor</a
+						>
+						made his collegiate debut last week, breaking the school record for
+						most points scored in a game.
+					</p>
+				</div>
+
+				<div class="step" data-step="2">
+					<p>
+						10 days prior, acclaimed animator and film producer, Walt Disney,
+						had just celebrated his birthday. Now he lay dead, 30 minutes from
+						his home in Los Angeles, in a bed at Saint Joseph Hospital. The
+						following day, his funeral would be held and on December 17th, he
+						would be cremated with his ashes interred at Forest Lawn Memorial
+						Park.
+					</p>
+				</div>
+
+				<div class="step" data-step="3">
+					<p>
+						It wasn't a freak accident or a tragic event. It was far more
+						ordinary and far more telling of the times.
+					</p>
+				</div>
+
+				<div class="step" data-step="4">
+					<p>
+						Like millions of other Americans, Walt Disney had been a lifelong
+						smoker. His addiction began in his early 20s while serving as an
+						ambulance driver for the Red Cross in France during World War I. The
+						long, empty stretches of duty in a postwar Europe offered little
+						distraction, so cigarettes filled the void. He loved the feeling
+						they gave him, the focus and power that came with a Brown
+						Chesterfield in between his restless fingers. Even his daughter said
+						she "<a
+							href="https://mouseplanet.com/walts-smoking-and-infamous-cough/4317/#google_vignette"
+							>couldn't picture him without a cigarette</a
+						>".
+					</p>
+				</div>
+
+				<div class="step" data-step="5">
+					<p>
+						As I'm sure you've guessed, the reason for his passing was of course
+						complications relating to his smoking. His official autopsy cited
+						"circulatory collapse caused by his lung cancer". Smoking caught up
+						to even the most magical of men.
+					</p>
+				</div>
+
+				<div class="step" data-step="6">
+					<p>
+						Disney's story was tragically unexceptional. In 1966, 42.6% of
+						American adults smoked, only slightly down from the 1954 peak of
+						45.3%. Smoking was a cultural norm, embedded into advertising,
+						cinema, workplaces, and even hospitals. Cigarettes were marketed as
+						symbols of masculinity, sophistication, and calm. Rarely were they
+						seen as lethal.
+					</p>
+				</div>
+
+				<div class="step" data-step="7">
+					<p>
+						Walt Disney's death mirrored the silent epidemic already claiming
+						hundreds of thousands of lives each year. His passing didn't just
+						mark the end of an era of animation; it marked a public health
+						moment that, over time, would catalyze a shift in how America viewed
+						smoking and health.
+					</p>
+				</div>
 			</div>
-
-			<div class="text-div">
-				<p>
-					It wasn't a freak accident or a tragic event. In fact, the same exact
-					story was occurring for millions of Americans across the U.S.
-				</p>
-			</div>
-
-			<div class="text-div">
-				<p>
-					Disney had been a heavy smoker since his 20s. As a driver for the Red
-					Cross in france, he first took up smoking out of boredom and the
-					general monotony of the miliary. Soon, they became a necessity for
-					him. He loved the feeling they gave him, the focus and power that came
-					with a Brown Chesterfield in between his restless fingers. Even his
-					daughter said she "<a
-						href="https://mouseplanet.com/walts-smoking-and-infamous-cough/4317/#google_vignette"
-						>couldn't picture him without a cigarette</a
-					>".
-				</p>
-			</div>
-
-			<div class="text-div">
-				<p>
-					The result of his death, then, was of course complications relating to
-					his smoking. His official autopsy attributes his death to circulatory
-					collapse caused by his lung cancer.
-				</p>
-			</div>
-
-			<div id="calories-viz" class="viz"></div>
-
 		</div>
+
+		<div class="chapter-title" style="margin-top: 5rem">DRINKS</div>
+
+		<div class="text-content">
+			<p>
+				Now, almost 60 years later, smoking seems, for the most part, to be a
+				problem of the past. The number of smokers in the U.S. has plummeted
+				from 42.6% in 1966 to just 11.5% in 2021, according to the CDC.
+				Cigarette ads are banned on TV, smoking is prohibited in most public
+				spaces, and nearly every American understands the deadly risks of
+				tobacco.
+			</p>
+
+			<p>But while one public health crisis receded, another emerged.</p>
+
+			<p>
+				Today, 42% of American adults are obese, a statistic eerily similar to
+				the smoking rate of the mid-20th century. Once again, we find ourselves
+				in the midst of a slow-motion epidemic—one not driven by cigarettes, but
+				by food.
+			</p>
+
+			<p>
+				In recent decades, ultra-processed foods (UPFs) have come to dominate
+				the American diet. These are not just snacks or fast food—they're food
+				products that are chemically altered and engineered for maximum shelf
+				life, convenience, and hyper-palatability. Think frozen dinners, sugary
+				cereals, flavored chips, sodas, protein bars, and even "health" foods
+				like flavored yogurt or granola.
+			</p>
+
+			<p>
+				UPFs now account for over 60% of the calories consumed by the average
+				American adult—and nearly 70% for children, according to research
+				published in the BMJ and JAMA Network. These foods are often stripped of
+				fiber and nutrients, packed with added sugars, artificial ingredients,
+				and emulsifiers, and designed to override our satiety signals.
+			</p>
+		</div>
+
+		<div class="chapter-title" style="margin-top: 5rem">SALAD</div>
+
+		<div class="text-content">
+			<p>Ok... so now what? Isn't that 42% stat just a coincidence?</p>
+
+			<p>
+				Not necessarily. In fact, I am almost certain that this isn't a
+				coincidence. Let's see why.
+			</p>
+
+			<p>
+				In 1985, R.J. Reynolds, the largest tobacco company in the United
+				States, merged with snack giant Nabisco to form RJR Nabisco. 3 years
+				later, Philip Morris, the producer of the cigarette brands Marlboro,
+				L&M, and Chesterfield, acquired Kraft foods. At the time, they were also the
+				owners of General Foods.
+			</p>
+
+			<p>
+				With the American public worried about smoking and the NIH's crosshair
+				pointed right at them, Big Tobacco jumped ship in favor of the food
+				industry. In the span of three years, the two largest cigarette
+				companies in the world bought a large massive portion of the food and snack
+				industry. Many of your favorite snack items are likely owned by the successors of these companies.
+			</p>
+
+			<p>
+				The crucial point of this shift, though, was that they had maintained
+				their same business strategy from the smoking business for food.
+			</p>
+
+			<p>
+				<strong>ADDICTION</strong><br />
+				They leveraged ultra-processed, hyper-palatable ingredients and
+				chemicals to make their customers as addicted as their previous
+				cigarette victims.
+			</p>
+		</div>
+
+		<div class="chapter-title" style="margin-top: 5rem">ENTREES</div>
+
+		<div id="calories-viz" class="viz"></div>
+
+		<div class="graph-description">
+			<p>
+				This first visualization paints a picture of how the American diet has
+				evolved over the past 40 years. In 1980, ultra-processed foods accounted
+				for about 30 percent of daily calories. Fast forward to 2020, and that
+				number has skyrocketed to over 50 percent. During that same period, the
+				percentage of calories from unprocessed or minimally processed foods has
+				steadily declined. What this means is that more and more of what we eat
+				is made not from whole ingredients but from industrial formulations
+				packed with additives, preservatives, and artificial flavors. The green
+				section representing unprocessed foods has been shrinking, while the
+				orange section for ultra-processed foods has taken over the majority of
+				the plate. This shift reflects a larger trend in modern food culture:
+				convenience and shelf life have largely overtaken nutritional quality.
+			</p>
+		</div>
+
+		<div id="smokers-viz" class="viz"></div>
+
+		<div class="graph-description">
+			<p>
+				The second visualization provides a clear link between smoking and UPF
+				consumption. It breaks down how often Americans eat various categories
+				of ultra-processed food depending on their smoking status. What it shows
+				is alarming: current smokers consistently consume more UPFs than both
+				former and never smokers across every single category.
+			</p>
+			<ul>
+				<li>
+					<strong>Frozen meals and pizza?</strong> Smokers eat them more
+					frequently.
+				</li>
+				<li><strong>Sugary drinks?</strong> Smokers top the charts.</li>
+				<li>
+					<strong>Processed snacks, fast food, breakfast cereal?</strong> Same
+					story.
+				</li>
+			</ul>
+		</div>
+
+		<div class="text-content">
+			<p>Together, these two visuals tell a cohesive story.</p>
+			<p>
+				The companies that once marketed cigarettes with cowboy swagger and
+				sophistication not sell taste. And their mastery of human impulse, honed
+				through decades of addiction science, has been redirected into the
+				supermarket aisle.
+			</p>
+		</div>
+
+		<div class="chapter-title" style="margin-top: 5rem">DESSERT</div>
+		<div class="text-content">
+			<p>
+				What we're seeing is not just a public health shift, but a corporate
+				rebranding of addiction.
+			</p>
+
+			<p>
+				The American public, in many ways, traded one form of self-destruction
+				for another. It may be less obvious, but it seems to be just as engineered. The death rate from
+				lung cancer may have dropped, but the rates of heart disease, diabetes,
+				and obesity-related illness are soaring.
+			</p>
+
+			<p>
+				The cigarette was easy to spot. It burned, it smelled, and it stained
+				your fingers. Ultra-processed food is much harder to identify and even
+				harder to resist. It doesn't kill you quickly. It just quietly rewires
+				your body and transforms your brain, one bite at a time.
+			</p>
+
+			<p>We're all just suffering from the leftovers of big tobacco.</p>
+		</div>
+
+		<div class="chapter-title" style="margin-top: 0">THE KITCHEN</div>
+
+		<div class="credits" style="padding-top: 0">
+			<p>
+				Made by <br /><a
+					href="https://github.com/CharlieKerfoot/the-leftovers-of-big-tobacco"
+					>Charlie Kerfoot</a
+				>
+			</p>
+			<p>
+				Created using <br />
+				<a href="https://altair-viz.github.io/">Vega-Altair</a>
+				<a href="https://github.com/russellsamora/scrollama">Scrollama.js</a>
+			</p>
+			<p>
+				Data from <br /><a href="https://wwwn.cdc.gov/nchs/nhanes/">NHANES</a>
+			</p>
+			<p>
+				Sources used <br />
+				<a href="https://pudding.cool/process/introducing-scrollama/"
+					>An Introduction to Scrollama.js by The Pudding
+				</a>
+				<br />
+				<a href="https://pudding.cool/process/how-to-make-dope-shit-part-1/"
+					>How to Make Dope Shit (Parts 1-3) by The Pudding
+				</a>
+			</p>
+		</div>
+
+		<script type="text/javascript">
+			var calories_chart =
+				'https://raw.githubusercontent.com/CharlieKerfoot/the-leftovers-of-big-tobacco/refs/heads/main/data/calories.json';
+			vegaEmbed('#calories-viz', calories_chart)
+				.then(function (result) {})
+				.catch(console.error);
+
+			var smoker_diets_chart =
+				'https://raw.githubusercontent.com/CharlieKerfoot/the-leftovers-of-big-tobacco/refs/heads/main/data/smoker_diets.json';
+			vegaEmbed('#smokers-viz', smoker_diets_chart)
+				.then(function (result) {})
+				.catch(console.error);
+
+			function updateImage(stepIndex) {
+				const images = document.querySelectorAll('.scroll-image');
+				images.forEach((img, index) => {
+					img.classList.remove('active');
+					if (index === stepIndex) {
+						img.classList.add('active');
+					}
+				});
+			}
+
+			function handleStepEnter(response) {
+				step.classed('is-active', function (d, i) {
+					return i === response.index;
+				});
+
+				graphic.classed('is-fixed', true);
+				graphic.classed('is-bottom', false);
+
+				updateImage(response.index);
+			}
+		</script>
+
+		<script src="script.js"></script>
 	</body>
 </html>
-
-<script type="text/javascript">
-	var spec = "https://raw.githubusercontent.com/CharlieKerfoot/the-leftovers-of-big-tobacco/refs/heads/main/data/calories.json";
-	vegaEmbed('#calories-viz', spec).then(function(result) {
-	  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-	}).catch(console.error);
-  </script>
 
 <style>
 	body {
 		margin: 0;
 		padding: 0;
-		background: #fff;
+		background: #d4d4d4;
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
+		position: relative;
+	}
+
+	body::before {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 20px;
+		background: #9a2020;
+		pointer-events: none;
+		z-index: 1000;
+	}
+
+	body::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 20px;
+		background: #9a2020;
+		pointer-events: none;
+		z-index: 1000;
+	}
+
+	/* Right side border */
+	body > div:first-child::before {
+		content: '';
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 20px;
+		background: #9a2020;
+		pointer-events: none;
+		z-index: 1000;
+	}
+
+	.aod-container {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		margin-top: 20px;
 	}
 
 	.header-container {
 		display: flex;
 		justify-content: center;
 		width: 100vw;
-		padding: 30px;
-		padding-left: 0 !important;
+		padding-bottom: 30px;
+		padding-top: 20px;
+		position: relative;
+		z-index: 1;
 	}
 
 	.header-text {
@@ -154,15 +471,10 @@
 	}
 
 	.aod-text {
-		color: #d9d9d9;
+		color: #4b4b4b;
 		text-align: center;
 		font-family: 'Imperial Script';
 		font-size: 60px;
-	}
-
-	.aod-container {
-		display: flex;
-		justify-content: center;
 	}
 
 	.title-divider {
@@ -179,6 +491,7 @@
 		align-self: center;
 		width: 83vw;
 		margin-top: 2vh;
+		margin-bottom: 50vh;
 	}
 
 	.desc-container > div {
@@ -196,7 +509,7 @@
 		width: 90vw;
 		align-self: center;
 		font-size: 20px;
-        display: flex;
+		display: flex;
 		background-color: whitesmoke;
 	}
 
@@ -211,29 +524,175 @@
 		text-decoration: none;
 	}
 
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		z-index: 0;
+	}
+
 	.chapter-title {
-        margin-top: 100vw;
 		font-family: 'Inknut Antiqua';
 		font-size: 60px;
 		font-weight: 300;
-		/* color: #9a2020; */
-        align-self: center;
+		align-self: center;
+		margin-top: 2rem;
+		position: relative;
+		z-index: 1;
 	}
 
-	.background {
-		min-height: 400vh;
-		background: #ffffff;
-		background: linear-gradient(
-			180deg,
-			rgba(255, 255, 255, 1) 0%,
-			rgba(96, 96, 96, 1) 50%
-        );
-		display: flex;
-        flex-direction: column;
+	.image-container {
+		position: relative;
+		width: 45%;
+		height: 30em;
+		margin: 2rem 0;
+		margin-left: 3rem;
+		padding-left: 4rem;
+	}
+
+	.scroll-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.scroll-image.active {
+		opacity: 0.65;
+	}
+
+	#scroll {
+		position: relative;
+		z-index: 1;
+		background: #d4d4d4;
+		margin-bottom: 20vh;
+	}
+
+	.graphic {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: 0;
+		background: #d4d4d4;
+	}
+
+	.scroll_text {
+		position: relative;
+		padding: 0 1rem;
+		width: 50%;
+		margin-left: auto;
+		z-index: 2;
+	}
+
+	.step {
+		margin-top: 15rem;
+		margin-right: 2rem;
+		background-color: rgb(248, 248, 248);
+		padding: 2rem;
+		border-radius: 8px;
+		opacity: 0.3;
+		transition: opacity 0.5s ease;
+		border: 3px solid #000000;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.step.is-active {
+		opacity: 1;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	}
+
+	.step p {
+		margin: 0;
+		line-height: 1.6;
+		font-size: 1.1rem;
 	}
 
 	.viz {
-		margin-top: 5em;
+		margin-bottom: 2em;
 		align-self: center;
+		position: relative;
+		z-index: 1;
+		background: #d4d4d4;
+		padding: 2rem 0;
+	}
+
+	.text-content {
+		width: 50%;
+		margin: 0 auto;
+		padding: 2rem;
+		text-align: left;
+	}
+
+	.text-content p {
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+		font-size: 1.1rem;
+	}
+
+	.text-content p:last-child {
+		margin-bottom: 0;
+	}
+
+	.text-content p strong {
+		font-size: 2.5rem;
+		display: block;
+		color: #9a2020;
+		text-align: center;
+		font-family: 'Inknut Antiqua';
+		letter-spacing: 2px;
+	}
+
+	.credits {
+		width: 50%;
+		margin: 0 auto;
+		padding: 2rem;
+		text-align: center;
+	}
+
+	.credits p {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+		font-size: 1.1rem;
+	}
+
+	.graph-description {
+		width: 50%;
+		margin: 0 auto 2rem auto;
+		padding: 1rem 2rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-left: 3px solid #9a2020;
+	}
+
+	.graph-description p {
+		margin-bottom: 1.5rem;
+		line-height: 1.8;
+		font-size: 1.1rem;
+		text-align: left;
+	}
+
+	.graph-description ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin: 1.5rem 0;
+	}
+
+	.graph-description li {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+		font-size: 1.1rem;
+	}
+
+	.graph-description strong {
+		color: #9a2020;
+		font-family: 'Inknut Antiqua';
 	}
 </style>
